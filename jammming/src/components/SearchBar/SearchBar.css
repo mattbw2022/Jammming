@@ -1,0 +1,48 @@
+#SearchBar{
+    margin: 10em 0 0 0;
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    color: #26327877;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+
+#SearchBar input{
+    border-radius: 2em;
+    width: 15em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    color: #26327877;
+    padding: 0 0 0 .5em;
+    text-align: center;
+}
+
+#SearchBar input::placeholder{
+    text-align: center;
+    color: #26327877;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+#SearchBar button{
+    color: white;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2em;
+    border: solid;
+    border-color: white;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #26327877;
+    margin: 0 0 0 .25em;
+    border-radius: 2em;
+    width: 6em;
+}
+
+#SearchBar button:hover{
+    background-color: white;
+    border-color: #26327877;
+    color: #26327877;
+    cursor: pointer;
+}
