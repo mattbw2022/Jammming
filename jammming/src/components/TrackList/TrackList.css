@@ -1,0 +1,86 @@
+.track-list-container{
+    display: flex;
+    flex-direction: column;
+    margin: 2em 1em 0 0;
+    font-family: 'Shadows Into Light', cursive;
+
+}
+
+.track-list{
+    font-size: 1.5em;
+    color: #263278;
+    display: flex;
+    flex-wrap: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: solid;
+    border-color: #26327877;
+    top: 1em;
+    width: 100%;
+    margin: 2em 0 0 0;
+}
+
+.track-list-title{
+    border-radius: 2em;
+    width: 15em;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 2em;
+    color: #26327877;
+    padding: 0 0 0 .5em;
+    text-align: center;
+}
+
+.track-list-title::placeholder{
+    color: #26327877;
+}
+
+.track-list-item{
+    padding: 0 1em;
+}
+
+.button-container{
+    display: flex;
+    justify-content: right;
+}
+
+.track-list-button{
+    color: #26327877;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 2em;
+    border: solid;
+    border-color: #26327877;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: white;
+    margin: .5em 0 0 0;
+    border-radius: 2em;
+    width: max-content;
+}
+
+.track-list-button:hover{
+    color: white;
+    border-color: white;
+    background-color: #26327877;
+    cursor: pointer;
+}
+
+.delete-button{
+    color: white;
+    background-color: #26327877;
+    width: 1.5em;
+    font-size: 1em;
+    border-radius: 1.5em;
+    border: solid;
+    border-color: white;
+    margin: 0 1em;
+}
+
+.delete-button:hover{
+    color: #263278;
+    background-color: white;
+    border-color: #263278;
+    cursor: pointer;
+}
