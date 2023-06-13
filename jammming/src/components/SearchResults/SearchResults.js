@@ -1,12 +1,19 @@
 import './SearchResults.css';
-import Track from '../Track/Track';
+import React from 'react';
+import TrackList from '../TrackList/TrackList';
 
-function SearchResults(){
-    return (
-        <div id='SearchResults'>
-            <Track></Track>
-        </div>
-    );
+class SearchResults extends React.Component{
+    render(){
+        return (
+            <div id='SearchResults'>
+                <TrackList
+                    tracks={this.props.searchResults}
+                    onAdd={this.props.onAdd}
+                    isRemoval={false}
+                />
+            </div>
+        );
+    }
 }
 
 export default SearchResults;
