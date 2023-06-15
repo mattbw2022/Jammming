@@ -25,12 +25,23 @@ class App extends React.Component{
     let foundTrack = this.state.playlistTracks.find(playlistTrack => playlistTrack.id === track.id);
     const newTrack = this.state.playlistTracks.concat(track);
 
-    foundTrack ? console.log("Track already in playlist") : this.setState({playlistTracks: newTrack});
+    if (!foundTrack){
+      this.setState({playlistTracks: newTrack})
+      this.removeFromSearchResults(track);
+    }
   }
 
   removeTrack(track){
     const isPresent = this.state.playlistTracks.filter(playlistTrack => playlistTrack.id !== track.id);
+    
+    const updatedSearchResults = this.state.searchResults.concat(track).sort((p1, p2) => (p1.name < p2.name) ? 1 : (p1.name > p2.name) ? -1 : 0);
     this.setState({playlistTracks : isPresent});
+    this.setState({searchResults : updatedSearchResults})
+  }
+
+  removeFromSearchResults(track){
+    const subjectTrack = this.state.searchResults.filter(searchResult => searchResult.id !== track.id)
+    this.setState({searchResults : subjectTrack})
   }
 
   updatePlaylistName(name){
@@ -51,9 +62,8 @@ class App extends React.Component{
   search(term){
     Spotify.search(term)
       .then(results => {
-        this.setState({searchResults: results});
+        this.setState({searchResults: (results).sort((p1, p2) => (p1.name < p2.name) ? 1 : (p1.name > p2.name) ? -1 : 0)});
       });
-    console.log(term);
   }
 
   render(){
