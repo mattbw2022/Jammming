@@ -25,12 +25,14 @@ class Track extends React.Component {
         this.props.onRemove(this.props.track);
     }
     render(){
+        console.log(this.props.track);
         return(
             <div className="track">
-                <h3 className='songTitle' name='title'>{this.props.track.name}</h3>
-                <h4 className='songInfo' name='artist'>{this.props.track.artist}</h4>
-                <h4 className='songInfo' name='album'>{this.props.track.album}</h4>
+                <h3 className='songTitle' name='songTitle'>{this.props.track.name}</h3>
+                <p className='songInfo' name='songInfo'>{this.props.track.artist} | {this.props.track.album}</p>
+                <img className='albumCover' src={this.props.track.images}/>
                 {this.renderAction()}
+                <div className='line'></div>
             </div>
         )
     }

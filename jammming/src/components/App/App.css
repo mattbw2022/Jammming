@@ -20,16 +20,21 @@ header h1{
 
 #songs{
   display: flex;
-  flex-wrap: wrap; 
   padding: 2em 0 0 0;
   justify-content: space-around;
   align-items: center;
 }
 
-.divider{
-  background-color: #26327877;
-  height: .5em;
-  border: solid;
-  border-color: white;
-  width: 100%;
+@media only screen and (max-width: 870px) {
+  #songs{
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header{
+    justify-content: center;
+    width: auto;
+  }
 }

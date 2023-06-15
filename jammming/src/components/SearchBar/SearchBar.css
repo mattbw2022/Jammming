@@ -46,3 +46,26 @@
     color: #26327877;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 750px) {
+    #SearchBar{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #SearchBar button{
+        margin-top: .5em;
+    }
+    
+}
+
+@media only screen and (max-width: 550px) {
+    #SearchBar input{
+        width: 10.5em;
+        font-size: 1.5em;
+    }
+
+    #SearchBar button{
+        font-size: 1.5em;
+    }
+}

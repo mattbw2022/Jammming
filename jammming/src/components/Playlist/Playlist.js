@@ -3,13 +3,20 @@ import './Playlist.css';
 import TrackList from "../TrackList/TrackList";
 
 class Playlist extends React.Component{
+    constructor(props){
+        super(props);
+        this.handleNameChange = this.handleNameChange.bind(this);
+    }
+
+
+    handleNameChange(e){
+        this.props.onNameChange(e.target.value)
+    }
+
     render(){
         return (
             <div className='play-list-container'>
-                <input className='play-list-title' placeholder='New Playlist'></input>
-                <div className='button-container'>
-                    <button className='play-list-button'>Submit To Spotify</button>
-                </div>
+                <input className='play-list-title' onChange={this.handleNameChange} placeholder='New Playlist'></input>
                 <div className='play-list'>
                     <TrackList 
                         tracks={this.props.playlistTracks} 
@@ -18,7 +25,7 @@ class Playlist extends React.Component{
                     />
                 </div>
                 <div className='button-container'>
-                    <button className='play-list-button'>Submit To Spotify</button>
+                    <button className='play-list-button' onClick={this.props.onSave}>Submit To Spotify</button>
                 </div>
             </div>
         );

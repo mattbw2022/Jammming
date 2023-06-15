@@ -1,17 +1,18 @@
 #SearchResults{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
     align-items: center;
     font-family: 'Shadows Into Light', cursive;
     font-size: 1.5em;
     color: white;
     background-color: #26327877;
-    margin: 2em 2em 2em 1em;
-    width: max-content;
+    margin: 4em 1em 2em 1em;
+    width: 35%;
+    height: 25em;
     border: solid;
     border-color: white;
     text-align: center;
+    overflow: auto;
 }
 
 .songTitle{
@@ -39,4 +40,10 @@
     background-color: white;
     border-color: #263278;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 870px){
+    #SearchResults{
+        width: 80%;
+    }
 }
