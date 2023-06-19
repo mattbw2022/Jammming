@@ -30,7 +30,7 @@ class Track extends React.Component {
             <div className="track">
                 <h3 className='songTitle' name='songTitle'>{this.props.track.name}</h3>
                 <p className='songInfo' name='songInfo'>{this.props.track.artist} | {this.props.track.album}</p>
-                <img className='albumCover' src={this.props.track.images}/>
+                <img className='albumCover' src={this.props.track.images} alt={this.props.track.album}/>
                 {this.renderAction()}
                 <div className='line'></div>
             </div>
