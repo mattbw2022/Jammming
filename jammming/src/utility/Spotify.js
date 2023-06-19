@@ -1,7 +1,7 @@
 
 let accessToken = '';
 const clientId = "0774ba0460a94cee906ff673f8d336a5";
-const redirectURI = "http://localhost:8888/callback/";
+const redirectURI = "http://localhost:3000/callback/";
 const Spotify = {
 
     getAccessToken(){
